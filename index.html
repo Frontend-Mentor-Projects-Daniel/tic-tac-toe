@@ -8,8 +8,13 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/favicon-32x32.png"
+      href="./develop/assets/favicon-32x32.png"
     />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./develop/css/normalize.css" />
+    <link rel="stylesheet" href="./develop/css/general.css" />
+    <link rel="stylesheet" href="./develop/css/index.css" />
 
     <title>Frontend Mentor | Tic Tac Toe</title>
   </head>
@@ -19,5 +24,55 @@
     <!-- SCREEN HEIGHT: 667PX -->
     <!-- SECTION DIMENSIONS: 327PX BY 429PX -->
     <!--===========================================-->
+    <main>
+      <!-- LOGO -->
+      <!-- prettier-ignore -->
+      <img class="logo" src="./develop/assets/logo.svg" alt="" role="image" />
+
+      <!-- BLOCK FOR PICKING BETWEEN X AND O -->
+      <div class="select-block">
+        <!-- Title telling player to pick x or o -->
+        <h4 class="select-block__title">pick player 1's mark</h4>
+        <!-- X or O -->
+        <div class="select-block__starting-choice">
+          <!-- X -->
+          <svg
+            width="64"
+            height="64"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-labelledby="option-x"
+          >
+            <title id="option-x">Click to choose X</title>
+            <path
+              d="M51.12 1.269c.511 0 1.023.195 1.414.586l9.611 9.611c.391.391.586.903.586 1.415s-.195 1.023-.586 1.414L44.441 32l17.704 17.705c.391.39.586.902.586 1.414 0 .512-.195 1.024-.586 1.415l-9.611 9.611c-.391.391-.903.586-1.415.586a1.994 1.994 0 0 1-1.414-.586L32 44.441 14.295 62.145c-.39.391-.902.586-1.414.586a1.994 1.994 0 0 1-1.415-.586l-9.611-9.611a1.994 1.994 0 0 1-.586-1.415c0-.512.195-1.023.586-1.414L19.559 32 1.855 14.295a1.994 1.994 0 0 1-.586-1.414c0-.512.195-1.024.586-1.415l9.611-9.611c.391-.391.903-.586 1.415-.586s1.023.195 1.414.586L32 19.559 49.705 1.855c.39-.391.902-.586 1.414-.586Z"
+              stroke="#31C3BD"
+              stroke-width="2"
+              fill="none"
+            />
+          </svg>
+          <!-- O -->
+          <svg
+            width="66"
+            height="66"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-labelledby="option-o"
+          >
+            <title id="option-o">Click to choose O</title>
+            <path
+              d="M33 1c17.673 0 32 14.327 32 32 0 17.673-14.327 32-32 32C15.327 65 1 50.673 1 33 1 15.327 15.327 1 33 1Zm0 18.963c-7.2 0-13.037 5.837-13.037 13.037 0 7.2 5.837 13.037 13.037 13.037 7.2 0 13.037-5.837 13.037-13.037 0-7.2-5.837-13.037-13.037-13.037Z"
+              stroke="#F2B137"
+              stroke-width="2"
+              fill="none"
+            />
+          </svg>
+        </div>
+        <!-- Reminder Text for who goes first -->
+        <p>remember: x goes first</p>
+      </div>
+      <!-- BUTTON - VS CPU -->
+      <button class="btn btn--primary btn--cpu">new game(vs cpu)</button>
+      <!-- BUTTON - VS PLAYER -->
+      <button class="btn btn--primary btn--player">new game(vs player)</button>
+    </main>
   </body>
 </html>

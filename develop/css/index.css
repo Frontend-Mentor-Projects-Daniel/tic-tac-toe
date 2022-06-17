@@ -1,0 +1,28 @@
+/**-------------------------
+ **       BUTTONS
+**------------------------**/
+/* cpu button */
+.btn--cpu {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  height: 3.5rem;
+  letter-spacing: 1px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 20.4375rem;
+}
+
+/* player button */
+.btn--player {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  height: 3.5rem;
+  letter-spacing: 1px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 20.4375rem;
+}

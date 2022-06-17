@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap');
+
+:root {
+  /* COLORS */
+  --cpu-color-main: #f2b137;
+  --cpu-color-shade: #ffc860;
+
+  --player-color-main: #31c3bd;
+  --player-color-shade: #65e9e4;
+
+  --gray-color-main: #a8bfc9;
+  --gray-color-shade: #dbe8ed;
+
+  --black-color-main: #1a2a33;
+  --black-color-shade: #1f3641;
+
+  /* BOX SHADOW */
+  --cpu-box-shadow: inset 0px -8px 0px #cc8b13;
+  --player-box-shadow: inset 0px -8px 0px #118c87;
+  --player-box-shadow: box-shadow: inset 0px -4px 0px #6B8997;;
+}
+
+body {
+  font-family: 'outfit', sans-serif;
+}
+
+/**-------------------------
+ **       BUTTONS
+**------------------------**/
+
+/* cpu button */
+.btn {
+  border: none;
+  color: var(--black-color-main);
+  transition: all 0.5s;
+}
+
+.btn--primary {
+    border-radius: 15px;
+}
+
+.btn--secondary {
+    border-radius: 10px;
+}
+
+.btn:hover {
+  transform: translateY(2px);
+}
+
+.btn--cpu {
+  background-color: var(--cpu-color-main);
+}
+
+/* player button */
+.btn--cpu:hover {
+  background-color: var(--cpu-color-shade);
+}
+
+.btn--player {
+  background-color: var(--player-color-main);
+}
+
+.btn--player:hover {
+  background-color: var(--player-color-shade);
+}
+
+/* tie button */
+.btn--tie {
+  background-color: var(--gray-color-main);
+}
+
+.btn--tie:hover {
+  background-color: var(--gray-color-shade);
+}

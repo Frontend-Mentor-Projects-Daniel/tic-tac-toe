@@ -46,6 +46,11 @@ body {
   font-family: 'outfit', sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: var(--black-color-main)
+}
+
 /**-------------------------
  **        UTILITY
 **------------------------**/

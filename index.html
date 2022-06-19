@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="./develop/css/general.css" />
     <link rel="stylesheet" href="./develop/css/index.css" />
 
+    <!-- JS -->
+    <script src="./develop/js/index.js" defer></script>
+
     <title>Frontend Mentor | Tic Tac Toe</title>
   </head>
   <body>
@@ -34,6 +37,7 @@
           <button class="select-block__x-wrapper">
             <!-- the image that is displayed is dependant on the currently selected button -->
             <img
+              data-default_x
               role="image"
               class="select-block__x"
               src="./develop/assets/icon-x-outline-small-gray.svg"
@@ -56,6 +60,7 @@
               alt="button to click in order to choose o"
             />
             <img
+              data-default_o
               role="image"
               class="select-block__o"
               src="./develop/assets/icon-o-outline-small-black.svg"
@@ -67,9 +72,13 @@
         <p class="select-block__reminder">remember: x goes first</p>
       </div>
       <!-- BUTTON - VS CPU -->
-      <button class="btn btn--primary btn--cpu">new game(vs cpu)</button>
+      <button class="btn btn--primary btn--cpu">
+        <a href="./develop/layout/game-multiplayer.html">new game(vs cpu)</a>
+      </button>
       <!-- BUTTON - VS PLAYER -->
-      <button class="btn btn--primary btn--player">new game(vs player)</button>
+      <button class="btn btn--primary btn--player">
+        <a href="./develop/layout/game-solo.html">new game(vs player)</a>
+      </button>
     </main>
   </body>
 </html>

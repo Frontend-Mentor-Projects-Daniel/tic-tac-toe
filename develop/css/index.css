@@ -1,4 +1,97 @@
 /**-------------------------
+ **     MAIN LAYOUT
+**------------------------**/
+
+/* center all content */
+.starting-page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 100vh;
+  width: 100vw;
+}
+
+/* SELECT BLOCK */
+.select-block {
+  background-color: var(--black-color-shade);
+  border-radius: 15px;
+  box-shadow: inset 0px -8px 0px #10212a;
+  height: 12.8125rem;
+  width: 20.4375rem;
+}
+
+/* top image */
+.logo {
+  margin-bottom: 2rem;
+}
+
+.select-block__title {
+  color: #a8bfc9;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* container for choosing x or o buttons */
+.select-block__starting-choice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--black-color-main);
+  border-radius: 10px;
+  height: 4.5rem;
+  margin: 0 auto;
+  width: 17.4375rem;
+}
+
+/* buttons for choosing x or o */
+.select-block__x-wrapper,
+.select-block__o-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--black-color-main);
+  border: none;
+  height: 3.3125rem;
+  width: 8.25rem;
+}
+
+.select-block__x,
+.select-block__o {
+  width: 32px;
+  height: 32px;
+}
+
+/* which block is currently highlighted */
+.select-block__active {
+  background: var(--gray-color-main);
+  border-radius: 10px;
+}
+
+/* reminder */
+.select-block__reminder {
+  color: var(--gray-color-main);
+  font-family: 'Outfit';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.875px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+
+/**-------------------------
  **       BUTTONS
 **------------------------**/
 /* cpu button */
@@ -12,6 +105,10 @@
   text-align: center;
   text-transform: uppercase;
   width: 20.4375rem;
+
+  /* space to above and below elements */
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 /* player button */
@@ -25,4 +122,29 @@
   text-align: center;
   text-transform: uppercase;
   width: 20.4375rem;
+}
+
+/**-------------------------
+ **     MEDIA QUERIES
+**------------------------**/
+
+/* For Tablet and Desktop */
+@media only screen and (min-width: 768px) {
+  .select-block {
+    width: 28.75rem;
+  }
+
+  .select-block__starting-choice {
+    width: 25.75rem;
+  }
+
+  .select-block__x-wrapper,
+  .select-block__o-wrapper {
+    width: 12.375rem;
+  }
+
+  .btn--cpu,
+  .btn--player {
+    width: 28.75rem;
+  }
 }

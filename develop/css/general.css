@@ -15,10 +15,8 @@
 <!-- SECTION DIMENSIONS: 460px x 205px-->
 <!--===========================================-->
 <!--=================DESKTOP====================-->
-<!-- SCREEN WIDTH: px -->
-<!-- SCREEN HEIGHT: px -->
-<!-- SECTION DIMENSIONS: px x px-->
-<!--===========================================--> 
+<!-- All tablet sizes work for desktop too -->
+<!--===========================================-->
 */
 
 :root {
@@ -46,6 +44,16 @@ body {
   font-family: 'outfit', sans-serif;
 }
 
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 100vh;
+  width: 100vw;
+}
+
 a {
   text-decoration: none;
   color: var(--black-color-main)
@@ -55,7 +63,7 @@ a {
  **        UTILITY
 **------------------------**/
 .hide {
-  display: none;
+  display: none !important;
 }
 
 

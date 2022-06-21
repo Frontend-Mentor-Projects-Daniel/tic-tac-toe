@@ -4,9 +4,103 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/favicon-32x32.png"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/game-multiplayer.css" />
+    <!-- JS -->
+    <script src="../js/gameMultiplayer.js" defer></script>
+
+    <title>Frontend Mentor | Tic Tac Toe</title>
   </head>
   <body>
-    <h1>STILL A WORK IN PROGRESS</h1>
+    <h1>
+      <main class="game-solo-page">
+        <!-- TOP BAR -->
+        <div class="top-bar">
+          <!-- logo -->
+          <img class="top-bar__logo" src="../assets/logo.svg" alt="" />
+          <!-- who's turn it is indicator -->
+          <div class="top-bar__indicator">
+            <img
+              src="../assets/Combined Shape Copy 2.png"
+              alt="indicator of who's turn it is"
+            />
+            <span>turn</span>
+          </div>
+          <button class="btn btn--restart">
+            <img
+              src="../assets/icon-restart.svg"
+              alt="click on this button to restart the game"
+            />
+          </button>
+        </div>
+
+        <!-- GAME BOARD -->
+        <div class="board" id="board">
+          <div class="board__cell" data-cell></div>
+          <div class="board__cell" data-cell></div>
+          <div class="board__cell" data-cell></div>
+          <div class="board__cell" data-cell></div>
+          <div class="board__cell" data-cell></div>
+          <div class="board__cell" data-cell></div>
+          <div class="board__cell" data-cell></div>
+          <div class="board__cell" data-cell></div>
+          <div class="board__cell" data-cell></div>
+        </div>
+
+        <!-- SCORE -->
+        <div class="score">
+          <div class="score__player">
+            <p>
+              <span>x</span>(you) <br />
+              <span class="score__number">14</span>
+            </p>
+          </div>
+          <div class="score__ties">
+            <p>
+              ties <br />
+              <span class="score__number">32</span>
+            </p>
+          </div>
+          <div class="score__cpu">
+            <p>
+              <span>o</span>(cpu) <br />
+              <span class="score__number">11</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- BANNER -->
+        <!-- message displayed depending on who won -->
+        <div class="banner hide" id="banner" data-winning-message-text>
+          <p class="banner__winner">player 1 wins!</p>
+          <div class="banner__round-winner">
+            <img
+              src="../assets/Oval Copy.png"
+              alt="image of x or o depending on who won"
+            />
+            <p>takes the round</p>
+          </div>
+          <div class="banner__buttons-wrapper">
+            <button class="btn btn--quit" id="quitButton">quit</button>
+            <button class="btn btn--next-round" id="restartButton">
+              next round
+            </button>
+          </div>
+        </div>
+        <!-- OVERLAY -->
+        <!-- for darkening everything behind the banner -->
+        <div class="overlay hide" id="overlay"></div>
+      </main>
+    </h1>
   </body>
 </html>

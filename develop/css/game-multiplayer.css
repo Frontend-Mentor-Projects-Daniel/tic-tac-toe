@@ -1,0 +1,361 @@
+.game-solo-page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 100vh;
+  position: relative;
+  width: 100vw;
+}
+
+/**-------------------------
+ **       TOP BAR
+**------------------------**/
+/* div for entire top bar */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 4rem;
+  width: 20.5rem;
+}
+
+/* logo image on the far left */
+.top-bar__logo {
+  width: 4.5rem;
+}
+
+/* who's turn it is */
+.top-bar__indicator {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  background: var(--black-color-shade);
+  box-shadow: inset 0px -4px 0px #10212a;
+  border-radius: 5px;
+  height: 2.5rem;
+  width: 6rem;
+}
+
+.top-bar__indicator img {
+  width: 1rem;
+  height: 1rem;
+}
+
+.top-bar__indicator span {
+  color: var(--gray-color-main);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.875px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.btn--restart {
+  background: var(--gray-color-main);
+  border-radius: 5px;
+  box-shadow: inset 0px -4px 0px #6b8997;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+/**-------------------------
+ **      GAME BOARD
+**------------------------**/
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+
+  margin-bottom: 1.25rem;
+  width: 20.5rem;
+}
+
+.board__cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--black-color-shade);
+  border-radius: 10px;
+  box-shadow: inset 0px -8px 0px #10212a;
+  height: 6rem;
+  width: 6rem;
+}
+
+.board__cell img {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+/**-------------------------
+ **        SCORE
+**------------------------**/
+.score {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 20.5rem;
+}
+
+.score__player,
+.score__ties,
+.score__cpu {
+  color: var(--black-color-main);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  height: 4rem;
+  letter-spacing: 0.875px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 6rem;
+}
+
+/* numerical score value */
+.score__number {
+  color: var(--black-color-main);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 1.25px;
+  line-height: 25px;
+  text-align: center;
+}
+
+/* player score */
+.score__player {
+  background: #31c3bd;
+  border-radius: 10px;
+}
+
+/* ties */
+.score__ties {
+  background: var(--gray-color-main);
+  border-radius: 10px;
+}
+/* cpu score */
+.score__cpu {
+  background: var(--cpu-color-main);
+  border-radius: 10px;
+}
+
+/**-------------------------
+ **        BANNER
+**------------------------**/
+.banner {
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--black-color-shade);
+  height: 14.25rem;
+  width: 100vw;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 5;
+}
+
+/* text for who won */
+.banner__winner {
+  color: var(--gray-color-main);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.875px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* whether x or o won the round */
+.banner__round-winner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  color: var(--cpu-color-main);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+/* div for buttons */
+.banner__buttons-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* quit button */
+.btn--quit {
+  background: var(--gray-color-main);
+  border-radius: 10px;
+  box-shadow: inset 0px -4px 0px #6b8997;
+  height: 3.25rem;
+  width: 4.875rem;
+
+  /* button text */
+  color: var(--black-color-main);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* next round button */
+.btn--next-round {
+  background: var(--cpu-color-main);
+  border-radius: 10px;
+  box-shadow: inset 0px -4px 0px #cc8b13;
+  height: 3.25rem;
+  width: 9.125rem;
+
+  /* button text */
+  color: var(--black-color-main);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/**-------------------------
+ **        OVERLAY
+**------------------------**/
+.overlay {
+  background: #000000;
+  height: 100vh;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  width: 100vw;
+
+  position: absolute;
+}
+
+/**-------------------------
+ **     MEDIA QUERIES
+**------------------------**/
+/* For Tablet and Desktop */
+@media only screen and (min-width: 768px) {
+  /*
+  <!--=================TOP-BAR====================--> 
+  */
+  .top-bar {
+    margin-bottom: 1.1875rem;
+    width: 28.5625rem;
+  }
+
+  .top-bar__indicator {
+    height: 3.25rem;
+    width: 8.75rem;
+  }
+
+  .top-bar__indicator img {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .top-bar__indicator span {
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 20px;
+  }
+
+  .btn--restart {
+    height: 3.25rem;
+    width: 3.25rem;
+  }
+
+  /*
+  <!--=================GAME-BOARD====================-->
+  */
+  .board {
+    width: 28.75rem;
+  }
+
+  .board__cell {
+    height: 8.75rem;
+    width: 8.75rem;
+  }
+
+  .board__cell img {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  /*
+  <!--=================SCORE====================--> 
+  */
+  .score {
+    width: 28.6875rem;
+  }
+
+  .score__player,
+  .score__ties,
+  .score__cpu {
+    width: 8.75rem;
+  }
+
+  .score__number {
+    font-size: 24px;
+    letter-spacing: 1.5px;
+    line-height: 30px;
+  }
+
+  /*
+  <!--=================BANNER====================--> 
+  */
+  .banner {
+    height: 16.625rem;
+  }
+
+  .banner__winner {
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 20px;
+  }
+
+  .banner__round-winner {
+    gap: 1.5rem;
+
+    font-style: normal;
+    font-size: 40px;
+    letter-spacing: 2.5px;
+    line-height: 50px;
+  }
+
+  .banner__round-winner img {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  .banner__buttons-wrapper {
+  }
+
+  .btn--quit {
+  }
+
+  .btn--next-round {
+  }
+}

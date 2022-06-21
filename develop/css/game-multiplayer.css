@@ -93,6 +93,21 @@
   width: 2.5rem;
 }
 
+/* create a shadow of x or o on hover except for an already taken space */
+.board__cell:not(.x):not(.o):hover {
+  /* background-image: url(../assets/icon-o.svg); */
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  opacity: 0.3;
+}
+
+/* show that this space is already taken and it can't be clicked on */
+.board__cell.x,
+.board__cell.o {
+  cursor: not-allowed;
+}
+
 /**-------------------------
  **        SCORE
 **------------------------**/

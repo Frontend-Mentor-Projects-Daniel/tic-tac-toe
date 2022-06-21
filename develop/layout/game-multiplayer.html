@@ -36,7 +36,7 @@
           />
           <span>turn</span>
         </div>
-        <button class="btn btn--restart">
+        <button class="btn btn--restart" id="restartButton">
           <img
             src="../assets/icon-restart.svg"
             alt="click on this button to restart the game"
@@ -83,7 +83,7 @@
 
       <!-- BANNER -->
       <!-- message displayed depending on who won -->
-      <div class="banner hide" id="banner">
+      <div class="banner" id="banner">
         <!-- format: player 1 wins! | player 2 wins! | round tied -->
         <p class="banner__winner" data-winning-message-text></p>
         <div class="banner__round-winner" id="banner__round-winner">
@@ -98,14 +98,14 @@
           <button class="btn btn--quit" id="quitButton">
             <a href="/index.html">quit</a>
           </button>
-          <button class="btn btn--next-round" id="restartButton">
+          <button class="btn btn--next-round" id="nextButton">
             next round
           </button>
         </div>
       </div>
       <!-- OVERLAY -->
       <!-- for darkening everything behind the banner -->
-      <div class="overlay hide" id="overlay"></div>
+      <div class="overlay" id="overlay"></div>
     </main>
   </body>
 </html>

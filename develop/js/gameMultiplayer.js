@@ -18,7 +18,11 @@ const WINNING_COMBINATIONS = [
   [2, 4, 6],
 ];
 
-const players = document.querySelectorAll('[data-player]');
+// const players = document.querySelectorAll('[data-player]');
+
+const nextButton = document.getElementById('nextButton');
+
+const restartButton = document.getElementById('restartButton');
 
 const winningMessageBanner = document.getElementById('banner');
 const winningMessageText = document.querySelector(
@@ -38,10 +42,10 @@ let oTurn;
  **   CALLBACK FUNCTIONS
  *------------------------**/
 const scoreKeeper = () => {
-  players.forEach((player) => {});
+  //   players.forEach((player) => {});
 };
 
-//FIXME: Hover states not showing
+//FIXME: Hover states not showing except for the middle
 // show hover states
 const setBoardHoverClass = () => {
   board.classList.remove(X_CLASS);
@@ -135,16 +139,33 @@ const handleClick = (e) => {
 // begin the game
 function startGame() {
   // keeps track of everything in the score div
-  scoreKeeper();
+  //   scoreKeeper();
 
   // decide whether to show the initial hover state or not
   oTurn = false;
 
   cellElements.forEach((cell) => {
+    // un-set everything for game restart
+    cell.classList.remove(X_CLASS);
+    cell.classList.remove(O_CLASS);
+    cell.removeEventListener('click', handleClick);
+
     // fire the event listener only once
     cell.addEventListener('click', handleClick, { once: true });
   });
 
+  // show x or o when hovering over a free board cell
   setBoardHoverClass();
+
+  // remove banner and overlay
+  winningMessageBanner.classList.add('hide');
+  overlay.classList.add('hide');
 }
+
 startGame();
+
+// restart game button
+restartButton.addEventListener('click', startGame);
+
+// for now, will just restart the game since score is not being kept yet
+nextButton.addEventListener('click', startGame);

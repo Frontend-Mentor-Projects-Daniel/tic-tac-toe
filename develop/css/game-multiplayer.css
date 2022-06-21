@@ -88,9 +88,24 @@
   width: 6rem;
 }
 
-.board__cell img {
+/* .board__cell img {
   height: 2.5rem;
   width: 2.5rem;
+} */
+
+/* image that will show when a cell is clicked on */
+.x {
+  background-image: url(../assets/icon-x.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 2.5rem 2.5rem;
+}
+
+.o {
+  background-image: url(../assets/icon-o.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 2.5rem 2.5rem;
 }
 
 /* create a shadow of x or o on hover except for an already taken space */
@@ -106,6 +121,7 @@
 .board__cell.x,
 .board__cell.o {
   cursor: not-allowed;
+  opacity: 1;
 }
 
 /**-------------------------
@@ -314,9 +330,14 @@
     width: 8.75rem;
   }
 
-  .board__cell img {
+  /* .board__cell img {
     height: 4rem;
     width: 4rem;
+  } */
+
+  .x,
+  .o {
+    background-size: 4rem 4rem;
   }
 
   /*

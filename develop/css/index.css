@@ -60,6 +60,7 @@
 
   background-color: var(--black-color-main);
   border: none;
+  cursor: pointer;
   height: 3.3125rem;
   width: 8.25rem;
 }

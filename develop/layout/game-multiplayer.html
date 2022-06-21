@@ -17,90 +17,95 @@
     <link rel="stylesheet" href="../css/general.css" />
     <link rel="stylesheet" href="../css/game-multiplayer.css" />
     <!-- JS -->
+    <!-- <script src="../js/player.js" defer></script> -->
     <script src="../js/gameMultiplayer.js" defer></script>
 
     <title>Frontend Mentor | Tic Tac Toe</title>
   </head>
   <body>
-    <h1>
-      <main class="game-solo-page">
-        <!-- TOP BAR -->
-        <div class="top-bar">
-          <!-- logo -->
-          <img class="top-bar__logo" src="../assets/logo.svg" alt="" />
-          <!-- who's turn it is indicator -->
-          <div class="top-bar__indicator">
-            <img
-              src="../assets/Combined Shape Copy 2.png"
-              alt="indicator of who's turn it is"
-            />
-            <span>turn</span>
-          </div>
-          <button class="btn btn--restart">
-            <img
-              src="../assets/icon-restart.svg"
-              alt="click on this button to restart the game"
-            />
+    <main class="game-solo-page">
+      <!-- TOP BAR -->
+      <div class="top-bar">
+        <!-- logo -->
+        <img class="top-bar__logo" src="../assets/logo.svg" alt="" />
+        <!-- who's turn it is indicator -->
+        <div class="top-bar__indicator">
+          <img
+            src="../assets/Combined Shape Copy 2.png"
+            alt="indicator of who's turn it is"
+          />
+          <span>turn</span>
+        </div>
+        <button class="btn btn--restart">
+          <img
+            src="../assets/icon-restart.svg"
+            alt="click on this button to restart the game"
+          />
+        </button>
+      </div>
+
+      <!-- GAME BOARD -->
+      <div class="board" id="board">
+        <div class="board__cell" data-cell></div>
+        <div class="board__cell" data-cell></div>
+        <div class="board__cell" data-cell></div>
+        <div class="board__cell" data-cell></div>
+        <div class="board__cell" data-cell></div>
+        <div class="board__cell" data-cell></div>
+        <div class="board__cell" data-cell></div>
+        <div class="board__cell" data-cell></div>
+        <div class="board__cell" data-cell></div>
+      </div>
+
+      <!-- SCORE -->
+      <div class="score">
+        <div class="score__player">
+          <p>
+            <!-- format: x(p1 | p2) -->
+            <span>x</span><span data-player="x">(p1)</span> <br />
+            <span class="score__number">0</span>
+          </p>
+        </div>
+        <div class="score__ties">
+          <p>
+            ties <br />
+            <span class="score__number">0</span>
+          </p>
+        </div>
+        <div class="score__cpu">
+          <p>
+            <!-- format: o(p1 | p2) -->
+            <span>o</span><span data-player="o">(p2)</span> <br />
+            <span class="score__number">0</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- BANNER -->
+      <!-- message displayed depending on who won -->
+      <div class="banner hide" id="banner">
+        <!-- format: player 1 wins! | player 2 wins! | round tied -->
+        <p class="banner__winner" data-winning-message-text></p>
+        <div class="banner__round-winner" id="banner__round-winner">
+          <img
+            data-winning-message-round-winner
+            src=""
+            alt="image of x or o depending on who won"
+          />
+          <p>takes the round</p>
+        </div>
+        <div class="banner__buttons-wrapper">
+          <button class="btn btn--quit" id="quitButton">
+            <a href="/index.html">quit</a>
+          </button>
+          <button class="btn btn--next-round" id="restartButton">
+            next round
           </button>
         </div>
-
-        <!-- GAME BOARD -->
-        <div class="board" id="board">
-          <div class="board__cell o" data-cell></div>
-          <div class="board__cell" data-cell></div>
-          <div class="board__cell" data-cell></div>
-          <div class="board__cell" data-cell></div>
-          <div class="board__cell" data-cell></div>
-          <div class="board__cell" data-cell></div>
-          <div class="board__cell" data-cell></div>
-          <div class="board__cell" data-cell></div>
-          <div class="board__cell" data-cell></div>
-        </div>
-
-        <!-- SCORE -->
-        <div class="score">
-          <div class="score__player">
-            <p>
-              <span>x</span>(you) <br />
-              <span class="score__number">14</span>
-            </p>
-          </div>
-          <div class="score__ties">
-            <p>
-              ties <br />
-              <span class="score__number">32</span>
-            </p>
-          </div>
-          <div class="score__cpu">
-            <p>
-              <span>o</span>(cpu) <br />
-              <span class="score__number">11</span>
-            </p>
-          </div>
-        </div>
-
-        <!-- BANNER -->
-        <!-- message displayed depending on who won -->
-        <div class="banner hide" id="banner" data-winning-message-text>
-          <p class="banner__winner">player 1 wins!</p>
-          <div class="banner__round-winner">
-            <img
-              src="../assets/Oval Copy.png"
-              alt="image of x or o depending on who won"
-            />
-            <p>takes the round</p>
-          </div>
-          <div class="banner__buttons-wrapper">
-            <button class="btn btn--quit" id="quitButton">quit</button>
-            <button class="btn btn--next-round" id="restartButton">
-              next round
-            </button>
-          </div>
-        </div>
-        <!-- OVERLAY -->
-        <!-- for darkening everything behind the banner -->
-        <div class="overlay hide" id="overlay"></div>
-      </main>
-    </h1>
+      </div>
+      <!-- OVERLAY -->
+      <!-- for darkening everything behind the banner -->
+      <div class="overlay hide" id="overlay"></div>
+    </main>
   </body>
 </html>
